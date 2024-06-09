@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cilj0g83srjnd"]
+
+[ext_resource type="Script" path="res://shapes/right_triangle.gd" id="1_xb40f"]
+
+[node name="Right_Triangle" type="Node2D" groups=["shape"]]
+script = ExtResource("1_xb40f")
+width = 8
+height = 4
+shape_col = Color(0.540854, 0.531571, 0.16443, 1)
+fall_speed = 20
+metadata/_edit_vertical_guides_ = [-160.0]

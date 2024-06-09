@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://baqniqm6i776i"]
+
+[ext_resource type="PackedScene" uid="uid://b48ysew835d6r" path="res://shapes/square.tscn" id="1_xtolx"]
+[ext_resource type="PackedScene" uid="uid://crp6n2wjc7eyi" path="res://shapes/isoceles.tscn" id="2_q2bww"]
+[ext_resource type="PackedScene" uid="uid://8shdlisg5hli" path="res://shapes/parallelogram.tscn" id="3_odkho"]
+[ext_resource type="PackedScene" uid="uid://cilj0g83srjnd" path="res://shapes/right_triangle.tscn" id="4_1agpw"]
+[ext_resource type="PackedScene" uid="uid://boeifydqp6ach" path="res://shapes/itrapezoid.tscn" id="5_yo30j"]
+
+[node name="Wave1" type="Node2D"]
+
+[node name="Square" parent="." instance=ExtResource("1_xtolx")]
+position = Vector2(180, -180)
+fall_speed = 40
+
+[node name="Square2" parent="." instance=ExtResource("1_xtolx")]
+position = Vector2(220, -1020)
+length = 6.0
+fall_speed = 40
+
+[node name="Square3" parent="." instance=ExtResource("1_xtolx")]
+position = Vector2(600, -1280)
+length = 6.0
+fall_speed = 40
+
+[node name="Isoceles" parent="." instance=ExtResource("2_q2bww")]
+position = Vector2(340, -480)
+fall_speed = 40
+
+[node name="Isoceles2" parent="." instance=ExtResource("2_q2bww")]
+position = Vector2(700, -660)
+height = 7
+fall_speed = 40
+
+[node name="Parallelogram" parent="." instance=ExtResource("3_odkho")]
+position = Vector2(180, -1520)
+v_offset = 6
+h_offset = 4
+fall_speed = 40
+
+[node name="Right_Triangle" parent="." instance=ExtResource("4_1agpw")]
+position = Vector2(300, -1940)
+height = 12
+fall_speed = 40
+
+[node name="ITrapezoid" parent="." instance=ExtResource("5_yo30j")]
+position = Vector2(280, -2660)
+fall_speed = 40

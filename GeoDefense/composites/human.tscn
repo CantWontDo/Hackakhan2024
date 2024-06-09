@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3 uid="uid://pf24wbmh0ihv"]
+
+[ext_resource type="PackedScene" uid="uid://c70rdadnm01yg" path="res://shapes/rectangle.tscn" id="1_jenjh"]
+
+[node name="human" type="Node2D"]
+
+[node name="Rectangle" parent="." instance=ExtResource("1_jenjh")]
+width = 16.0
+height = 16.0
+shape_col = Color(0, 0, 0.447059, 1)
+
+[node name="Rectangle2" parent="." instance=ExtResource("1_jenjh")]
+position = Vector2(60, 320)
+width = 4.0
+height = 8.0
+shape_col = Color(0.945098, 0.603922, 0.32549, 1)
+
+[node name="Rectangle3" parent="." instance=ExtResource("1_jenjh")]
+position = Vector2(180, 320)
+width = 4.0
+height = 8.0
+shape_col = Color(0.945098, 0.603922, 0.32549, 1)
+
+[node name="Rectangle4" parent="." instance=ExtResource("1_jenjh")]
+position = Vector2(60, -160)
+width = 10.0
+height = 8.0
+shape_col = Color(0.945098, 0.603922, 0.32549, 1)
+
+[node name="Rectangle5" parent="." instance=ExtResource("1_jenjh")]
+position = Vector2(320, 40)
+width = 12.0
+height = 4.0
+shape_col = Color(0.945098, 0.603922, 0.32549, 1)
+
+[node name="Rectangle6" parent="." instance=ExtResource("1_jenjh")]
+position = Vector2(-240, 40)
+width = 12.0
+height = 4.0
+shape_col = Color(0.945098, 0.603922, 0.32549, 1)
+
+[node name="Rectangle7" parent="." instance=ExtResource("1_jenjh")]
+position = Vector2(-40, -240)
+height = 4.0
+shape_col = Color(0.398339, 0.176165, 0.0150057, 1)
+
+[node name="Rectangle8" parent="." instance=ExtResource("1_jenjh")]
+position = Vector2(40, -320)
+width = 12.0
+height = 4.0
+shape_col = Color(0.4, 0.176471, 0.0156863, 1)

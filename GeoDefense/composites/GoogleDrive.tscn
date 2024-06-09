@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://dm7hu6w0fkgre"]
+
+[ext_resource type="PackedScene" uid="uid://crp6n2wjc7eyi" path="res://shapes/isoceles.tscn" id="1_j4qw3"]
+[ext_resource type="PackedScene" uid="uid://8shdlisg5hli" path="res://shapes/parallelogram.tscn" id="2_hgmul"]
+[ext_resource type="PackedScene" uid="uid://c70rdadnm01yg" path="res://shapes/rectangle.tscn" id="3_e6wx4"]
+
+[node name="GoogleDrive" type="Node2D"]
+
+[node name="Isoceles4" parent="." instance=ExtResource("1_j4qw3")]
+position = Vector2(0, 1)
+shape_col = Color(0.0193494, 0.489901, 0.798271, 1)
+fall_speed = 20
+
+[node name="Parallelogram" parent="." instance=ExtResource("2_hgmul")]
+position = Vector2(-100, -160)
+v_offset = 14
+shape_col = Color(0.273935, 0.765419, 0.363636, 1)
+fall_speed = 20
+
+[node name="Rectangle" parent="." instance=ExtResource("3_e6wx4")]
+position = Vector2(-80, 0)
+height = 4.0
+fall_speed = 20
+
+[node name="Parallelogram3" parent="." instance=ExtResource("2_hgmul")]
+position = Vector2(-100, -320)
+v_offset = 16
+h_offset = 9
+shape_col = Color(0.915913, 0.883673, 0.279745, 1)
+fall_speed = 20

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://crp6n2wjc7eyi"]
+
+[ext_resource type="Script" path="res://shapes/isoceles.gd" id="1_uiu81"]
+
+[node name="Isoceles" type="Node2D" groups=["shape"]]
+script = ExtResource("1_uiu81")
+width = 8
+height = 8
+shape_col = Color(0.339159, 0.767206, 0.397484, 1)
+fall_speed = 20

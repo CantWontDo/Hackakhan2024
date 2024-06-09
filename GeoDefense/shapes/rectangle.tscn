@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://c70rdadnm01yg"]
+
+[ext_resource type="Script" path="res://shapes/rectangle.gd" id="1_mxvrl"]
+
+[node name="Rectangle" type="Node2D" groups=["shape"]]
+script = ExtResource("1_mxvrl")
+width = 20.0
+height = 11.0
+shape_col = Color(0.942345, 0.0834408, 0.167477, 1)

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmsugp3jv7qnp"]
+
+[ext_resource type="PackedScene" uid="uid://crp6n2wjc7eyi" path="res://shapes/isoceles.tscn" id="1_nehmr"]
+[ext_resource type="PackedScene" uid="uid://b48ysew835d6r" path="res://shapes/square.tscn" id="2_md7ot"]
+[ext_resource type="PackedScene" uid="uid://4mvttl76pypr" path="res://shapes/trapezoid.tscn" id="3_d3jjk"]
+
+[node name="stu" type="Node2D"]
+
+[node name="Isoceles" parent="." instance=ExtResource("1_nehmr")]
+position = Vector2(-20, 0)
+height = 12
+
+[node name="Square" parent="." instance=ExtResource("2_md7ot")]
+position = Vector2(-140, 140)
+length = 12.0
+shape_col = Color(0.337255, 0.768627, 0.396078, 1)
+
+[node name="Trapezoid" parent="." instance=ExtResource("3_d3jjk")]
+position = Vector2(-20, 0)
+shape_col = Color(0.337255, 0.768627, 0.396078, 1)

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://boeifydqp6ach"]
+
+[ext_resource type="Script" path="res://shapes/itrapezoid.gd" id="1_v824o"]
+
+[node name="ITrapezoid" type="Node2D" groups=["shape"]]
+script = ExtResource("1_v824o")
+height = 6
+shape_col = Color(0.0882565, 0.437748, 0.803402, 1)

@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2ydl233yfl7c"]
+
+[ext_resource type="PackedScene" uid="uid://4mvttl76pypr" path="res://shapes/trapezoid.tscn" id="1_leddv"]
+[ext_resource type="PackedScene" uid="uid://b48ysew835d6r" path="res://shapes/square.tscn" id="2_vtcds"]
+
+[node name="Goomba" type="Node2D"]
+
+[node name="Trapezoid" parent="." instance=ExtResource("1_leddv")]
+position = Vector2(140, -440)
+top_length = 10
+bottom_length = 18
+height = 12
+fall_speed = 20
+
+[node name="Square" parent="." instance=ExtResource("2_vtcds")]
+position = Vector2(40, -200)
+length = 10.0
+shape_col = Color(0.98115, 0.671708, 0.533884, 1)
+fall_speed = 20
+
+[node name="Square2" parent="." instance=ExtResource("2_vtcds")]
+length = 4.0
+shape_col = Color(0.409285, 0.23528, 0.163913, 1)
+fall_speed = 20
+
+[node name="Square3" parent="." instance=ExtResource("2_vtcds")]
+position = Vector2(210, -10)
+length = 4.0
+shape_col = Color(0.45098, 0.290196, 0.223529, 1)
+fall_speed = 20

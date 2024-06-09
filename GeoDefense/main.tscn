@@ -1,0 +1,93 @@
+[gd_scene load_steps=7 format=3 uid="uid://x05jxiwhuf2x"]
+
+[ext_resource type="Script" path="res://Cursor.gd" id="1_5mvrm"]
+[ext_resource type="Script" path="res://WaveText.gd" id="2_v032v"]
+[ext_resource type="Theme" uid="uid://bkdkpot1y2qbh" path="res://theme.tres" id="2_xqns1"]
+[ext_resource type="FontFile" uid="uid://bxn1a8um6d2mw" path="res://Renogare-Regular.otf" id="2_xt317"]
+[ext_resource type="Script" path="res://AnswerBox.gd" id="3_mav3f"]
+[ext_resource type="Script" path="res://StartText.gd" id="4_kamhh"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Cursor" type="Node2D" parent="."]
+process_priority = 5
+z_index = 1
+script = ExtResource("1_5mvrm")
+
+[node name="AnswerBox" type="LineEdit" parent="."]
+offset_left = 380.0
+offset_top = 480.0
+offset_right = 461.0
+offset_bottom = 511.0
+scale = Vector2(4.4, 4.4)
+theme_override_fonts/font = ExtResource("2_xt317")
+placeholder_text = "Answer"
+alignment = 1
+expand_to_text_length = true
+middle_mouse_paste_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+caret_blink = true
+script = ExtResource("3_mav3f")
+
+[node name="AnswerButton" type="Button" parent="AnswerBox"]
+layout_mode = 0
+offset_left = 27.2727
+offset_top = 36.3636
+offset_right = 97.2727
+offset_bottom = 63.3636
+scale = Vector2(0.4, 0.4)
+theme = ExtResource("2_xqns1")
+action_mode = 0
+text = "Submit"
+
+[node name="WaveText" type="Label" parent="."]
+process_priority = 2
+z_index = 3
+offset_top = 220.0
+offset_right = 135.0
+offset_bottom = 246.0
+scale = Vector2(8, 8)
+theme = ExtResource("2_xqns1")
+horizontal_alignment = 1
+script = ExtResource("2_v032v")
+
+[node name="StartText" type="Label" parent="."]
+process_priority = 2
+z_index = 3
+offset_top = 220.0
+offset_right = 135.0
+offset_bottom = 246.0
+scale = Vector2(8, 8)
+theme = ExtResource("2_xqns1")
+text = "Geo Defense"
+horizontal_alignment = 1
+script = ExtResource("4_kamhh")
+
+[node name="EndText" type="Label" parent="."]
+process_priority = 2
+z_index = 3
+offset_top = 220.0
+offset_right = 135.0
+offset_bottom = 246.0
+scale = Vector2(8, 8)
+theme = ExtResource("2_xqns1")
+text = "
+"
+horizontal_alignment = 1
+
+[node name="EndTextScore" type="Label" parent="."]
+process_priority = 2
+z_index = 3
+offset_left = 440.0
+offset_top = 380.0
+offset_right = 615.0
+offset_bottom = 406.0
+scale = Vector2(1.6, 1.6)
+theme = ExtResource("2_xqns1")
+text = "
+"
+horizontal_alignment = 1
+
+[connection signal="text_changed" from="AnswerBox" to="AnswerBox" method="_on_text_changed"]

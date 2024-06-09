@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bkdkpot1y2qbh"]
+
+[ext_resource type="FontFile" uid="uid://bxn1a8um6d2mw" path="res://Renogare-Regular.otf" id="1_1rjg5"]
+
+[resource]
+default_font = ExtResource("1_1rjg5")

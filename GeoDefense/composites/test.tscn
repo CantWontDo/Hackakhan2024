@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4rr5cbwig0hh"]
+
+[ext_resource type="PackedScene" uid="uid://b7fhy7i3au4vx" path="res://shapes/composite.tscn" id="1_4utpe"]
+[ext_resource type="PackedScene" uid="uid://boeifydqp6ach" path="res://shapes/itrapezoid.tscn" id="2_1xjq5"]
+[ext_resource type="PackedScene" uid="uid://b48ysew835d6r" path="res://shapes/square.tscn" id="3_ag8uv"]
+
+[node name="Test" instance=ExtResource("1_4utpe")]
+shape_col = Color(1, 1, 1, 1)
+fall_speed = 10
+
+[node name="ITrapezoid" parent="." index="0" instance=ExtResource("2_1xjq5")]
+fall_speed = 20
+
+[node name="Square" parent="." index="1" instance=ExtResource("3_ag8uv")]
+position = Vector2(0, -180)

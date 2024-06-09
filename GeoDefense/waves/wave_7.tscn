@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwclepu76gsyg"]
+
+[ext_resource type="PackedScene" uid="uid://b48ysew835d6r" path="res://shapes/square.tscn" id="1_8rvkk"]
+[ext_resource type="PackedScene" uid="uid://c2ydl233yfl7c" path="res://composites/Goomba.tscn" id="2_qrvsa"]
+[ext_resource type="PackedScene" uid="uid://8shdlisg5hli" path="res://shapes/parallelogram.tscn" id="3_wpeay"]
+
+[node name="Wave1" type="Node2D"]
+
+[node name="Square" parent="." instance=ExtResource("1_8rvkk")]
+position = Vector2(20, -140)
+length = 7.0
+fall_speed = 40
+
+[node name="Goomba" parent="." instance=ExtResource("2_qrvsa")]
+position = Vector2(340, -1820)
+
+[node name="Parallelogram" parent="." instance=ExtResource("3_wpeay")]
+position = Vector2(460, -920)
+length = 8
+v_offset = 10
+fall_speed = 40

@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://dm15vhef5f3ou"]
+
+[ext_resource type="PackedScene" uid="uid://8shdlisg5hli" path="res://shapes/parallelogram.tscn" id="2_6h4xj"]
+[ext_resource type="PackedScene" uid="uid://c70rdadnm01yg" path="res://shapes/rectangle.tscn" id="3_2lcgm"]
+
+[node name="Wave2" type="Node2D"]
+
+[node name="Parallelogram" parent="." instance=ExtResource("2_6h4xj")]
+position = Vector2(200, -60)
+v_offset = 3
+fall_speed = 40
+
+[node name="Rectangle" parent="." instance=ExtResource("3_2lcgm")]
+position = Vector2(240, -1360)
+width = 10.0
+height = 5.0
+fall_speed = 40
+
+[node name="Parallelogram2" parent="." instance=ExtResource("2_6h4xj")]
+position = Vector2(260, -1020)
+v_offset = 6
+h_offset = 2
+fall_speed = 40
+
+[node name="Parallelogram2" parent="Parallelogram2" instance=ExtResource("2_6h4xj")]
+position = Vector2(-40, -840)
+v_offset = 12
+h_offset = 5
+fall_speed = 40
+
+[node name="Rectangle2" parent="." instance=ExtResource("3_2lcgm")]
+position = Vector2(500, -700)
+width = 8.0
+height = 12.0
+fall_speed = 40

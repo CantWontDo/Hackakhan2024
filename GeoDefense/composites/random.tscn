@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://ob5jri27sqnt"]
+
+[ext_resource type="PackedScene" uid="uid://c70rdadnm01yg" path="res://shapes/rectangle.tscn" id="1_p78ld"]
+[ext_resource type="PackedScene" uid="uid://crp6n2wjc7eyi" path="res://shapes/isoceles.tscn" id="2_j2sop"]
+[ext_resource type="PackedScene" uid="uid://boeifydqp6ach" path="res://shapes/itrapezoid.tscn" id="3_jjdb5"]
+[ext_resource type="PackedScene" uid="uid://8shdlisg5hli" path="res://shapes/parallelogram.tscn" id="4_gd5a2"]
+[ext_resource type="PackedScene" uid="uid://cilj0g83srjnd" path="res://shapes/right_triangle.tscn" id="5_gcxsv"]
+
+[node name="random" type="Node2D"]
+
+[node name="Rectangle" parent="." instance=ExtResource("1_p78ld")]
+position = Vector2(-120, -80)
+height = 14.0
+
+[node name="Isoceles" parent="." instance=ExtResource("2_j2sop")]
+position = Vector2(20, -80)
+width = 14
+
+[node name="ITrapezoid" parent="." instance=ExtResource("3_jjdb5")]
+position = Vector2(80, 200)
+
+[node name="Parallelogram" parent="." instance=ExtResource("4_gd5a2")]
+position = Vector2(300, -240)
+length = 6
+v_offset = 8
+shape_col = Color(0.986645, 0.43985, 0.616549, 1)
+
+[node name="Right_Triangle" parent="." instance=ExtResource("5_gcxsv")]
+position = Vector2(300, -240)
+width = 14
+height = 6

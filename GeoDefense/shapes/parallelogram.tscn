@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://8shdlisg5hli"]
+
+[ext_resource type="Script" path="res://shapes/parallelogram.gd" id="1_fcjqb"]
+
+[node name="Parallelogram" type="Node2D" groups=["shape"]]
+script = ExtResource("1_fcjqb")
+length = 5
+v_offset = -3
+h_offset = -7
+shape_col = Color(0.298443, 0.748869, 0.547977, 1)
+fall_speed = 20

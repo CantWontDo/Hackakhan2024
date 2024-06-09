@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bt0neyr6omkes"]
+
+[ext_resource type="Script" path="res://Cursor.gd" id="2_reolj"]
+[ext_resource type="PackedScene" uid="uid://bj55tiid8jyn8" path="res://test_shape.tscn" id="2_ruhor"]
+[ext_resource type="PackedScene" uid="uid://hc0qd3shqok" path="res://circle.tscn" id="3_qib5l"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Cursor" type="Node2D" parent="."]
+script = ExtResource("2_reolj")
+
+[node name="Test_Shape" parent="." instance=ExtResource("2_ruhor")]
+position = Vector2(420, 200)
+
+[node name="Circle" parent="." instance=ExtResource("3_qib5l")]
+position = Vector2(120, 280)
+radius = 4.0

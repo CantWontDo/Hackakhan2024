@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7fhy7i3au4vx"]
+
+[ext_resource type="PackedScene" uid="uid://cwdhgbrs36hdn" path="res://shapes/shape.tscn" id="1_xkvu6"]
+[ext_resource type="Script" path="res://shapes/composite.gd" id="2_kgnla"]
+
+[node name="Composite" groups=["shape"] instance=ExtResource("1_xkvu6")]
+script = ExtResource("2_kgnla")

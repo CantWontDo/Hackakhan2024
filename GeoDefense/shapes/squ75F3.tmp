@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b48ysew835d6r"]
+
+[ext_resource type="Script" path="res://shapes/square.gd" id="1_huu70"]
+
+[node name="Square" type="Node2D"]
+script = ExtResource("1_huu70")

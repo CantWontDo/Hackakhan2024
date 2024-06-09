@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsq05f11lqmv4"]
+
+[ext_resource type="PackedScene" uid="uid://b48ysew835d6r" path="res://shapes/square.tscn" id="1_3mx3d"]
+[ext_resource type="PackedScene" uid="uid://crp6n2wjc7eyi" path="res://shapes/isoceles.tscn" id="2_6tt7y"]
+
+[node name="Wave1" type="Node2D"]
+
+[node name="Square" parent="." instance=ExtResource("1_3mx3d")]
+position = Vector2(200, 140)
+
+[node name="Square2" parent="." instance=ExtResource("1_3mx3d")]
+position = Vector2(780, 140)
+length = 6.0
+
+[node name="Square3" parent="." instance=ExtResource("1_3mx3d")]
+position = Vector2(580, -80)
+length = 6.0
+
+[node name="Isoceles" parent="." instance=ExtResource("2_6tt7y")]
+position = Vector2(300, 0)
+
+[node name="Isoceles2" parent="." instance=ExtResource("2_6tt7y")]
+position = Vector2(840, -40)
+height = 7

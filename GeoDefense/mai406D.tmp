@@ -1,0 +1,76 @@
+[gd_scene load_steps=7 format=3 uid="uid://bt0neyr6omkes"]
+
+[ext_resource type="Script" path="res://AnswerBox.gd" id="2_cpjv4"]
+[ext_resource type="Script" path="res://Cursor.gd" id="2_reolj"]
+[ext_resource type="Theme" uid="uid://bkdkpot1y2qbh" path="res://theme.tres" id="2_wbnvv"]
+[ext_resource type="Script" path="res://WaveText.gd" id="4_7r3c5"]
+[ext_resource type="Script" path="res://WaveManager.gd" id="5_br0nm"]
+[ext_resource type="Script" path="res://StartText.gd" id="5_r7je3"]
+
+[node name="Main" type="Node2D"]
+
+[node name="WaveManager" type="Node" parent="."]
+process_priority = 4
+script = ExtResource("5_br0nm")
+
+[node name="SpawnOrigin" type="Marker2D" parent="WaveManager"]
+position = Vector2(540, -100)
+
+[node name="Cursor" type="Node2D" parent="."]
+process_priority = -3
+script = ExtResource("2_reolj")
+
+[node name="AnswerBox" type="LineEdit" parent="."]
+unique_name_in_owner = true
+process_priority = -2
+top_level = true
+offset_left = 400.0
+offset_top = 520.0
+offset_right = 480.0
+offset_bottom = 551.0
+scale = Vector2(3.6, 3.6)
+theme = ExtResource("2_wbnvv")
+placeholder_text = "Answer"
+alignment = 1
+max_length = 6
+expand_to_text_length = true
+context_menu_enabled = false
+virtual_keyboard_type = 2
+drag_and_drop_selection_enabled = false
+caret_blink = true
+script = ExtResource("2_cpjv4")
+
+[node name="AnswerButton" type="Button" parent="AnswerBox"]
+unique_name_in_owner = true
+process_priority = -2
+layout_mode = 0
+offset_left = 22.2222
+offset_top = 33.3333
+offset_right = 50.2222
+offset_bottom = 47.3333
+scale = Vector2(1.2, 1.2)
+theme_override_font_sizes/font_size = 5
+action_mode = 0
+text = "Submit"
+
+[node name="WaveText" type="Label" parent="."]
+offset_top = 200.0
+offset_right = 125.0
+offset_bottom = 228.0
+scale = Vector2(8.8, 8)
+theme = ExtResource("2_wbnvv")
+horizontal_alignment = 1
+script = ExtResource("4_7r3c5")
+
+[node name="StartText" type="Label" parent="." node_paths=PackedStringArray("wave_text")]
+offset_top = 200.0
+offset_right = 123.0
+offset_bottom = 228.0
+scale = Vector2(8.8, 8)
+theme = ExtResource("2_wbnvv")
+text = "Geo Defense"
+horizontal_alignment = 1
+script = ExtResource("5_r7je3")
+wave_text = NodePath("../WaveText")
+
+[connection signal="text_changed" from="AnswerBox" to="AnswerBox" method="_on_text_changed"]

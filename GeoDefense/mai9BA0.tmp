@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://bt0neyr6omkes"]
+
+[ext_resource type="Script" path="res://AnswerBox.gd" id="2_cpjv4"]
+[ext_resource type="Script" path="res://Cursor.gd" id="2_reolj"]
+[ext_resource type="Theme" uid="uid://bkdkpot1y2qbh" path="res://theme.tres" id="2_wbnvv"]
+[ext_resource type="PackedScene" uid="uid://b48ysew835d6r" path="res://shapes/square.tscn" id="4_wwca7"]
+[ext_resource type="PackedScene" uid="uid://c70rdadnm01yg" path="res://shapes/rectangle.tscn" id="5_fw6jo"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Cursor" type="Node2D" parent="."]
+process_priority = -1
+script = ExtResource("2_reolj")
+
+[node name="AnswerBox" type="LineEdit" parent="."]
+unique_name_in_owner = true
+offset_left = 400.0
+offset_top = 520.0
+offset_right = 480.0
+offset_bottom = 551.0
+scale = Vector2(3.6, 3.6)
+theme = ExtResource("2_wbnvv")
+placeholder_text = "Answer"
+alignment = 1
+max_length = 6
+expand_to_text_length = true
+context_menu_enabled = false
+virtual_keyboard_type = 2
+drag_and_drop_selection_enabled = false
+caret_blink = true
+script = ExtResource("2_cpjv4")
+
+[node name="AnswerButton" type="Button" parent="AnswerBox"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 22.2222
+offset_top = 33.3333
+offset_right = 50.2222
+offset_bottom = 47.3333
+scale = Vector2(1.2, 1.2)
+theme_override_font_sizes/font_size = 5
+action_mode = 0
+text = "Submit"
+
+[node name="Square" parent="." instance=ExtResource("4_wwca7")]
+position = Vector2(520, 260)
+length = 2.0
+
+[node name="Rectangle" parent="." instance=ExtResource("5_fw6jo")]
+position = Vector2(60, 40)
+width = 6.0
+height = 2.0
+
+[connection signal="text_changed" from="AnswerBox" to="AnswerBox" method="_on_text_changed"]

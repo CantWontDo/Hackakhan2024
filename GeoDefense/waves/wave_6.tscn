@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5gndjfuy2um7"]
+
+[ext_resource type="PackedScene" uid="uid://b48ysew835d6r" path="res://shapes/square.tscn" id="1_vtuut"]
+[ext_resource type="PackedScene" uid="uid://4mvttl76pypr" path="res://shapes/trapezoid.tscn" id="2_ao6ar"]
+[ext_resource type="PackedScene" uid="uid://b4rr5cbwig0hh" path="res://composites/test.tscn" id="2_l3bpn"]
+
+[node name="Wave1" type="Node2D"]
+
+[node name="Square" parent="." instance=ExtResource("1_vtuut")]
+position = Vector2(20, -140)
+length = 7.0
+fall_speed = 40
+
+[node name="Test" parent="." instance=ExtResource("2_l3bpn")]
+position = Vector2(120, -1580)
+
+[node name="Trapezoid" parent="." instance=ExtResource("2_ao6ar")]
+position = Vector2(220, -820)
+top_length = 10
+bottom_length = 5
+height = 6
+fall_speed = 40

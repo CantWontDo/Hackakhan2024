@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://bfvmjtpfwmx5q"]
+
+[ext_resource type="PackedScene" uid="uid://8shdlisg5hli" path="res://shapes/parallelogram.tscn" id="1_a0404"]
+[ext_resource type="PackedScene" uid="uid://c70rdadnm01yg" path="res://shapes/rectangle.tscn" id="2_4hl7s"]
+[ext_resource type="PackedScene" uid="uid://cilj0g83srjnd" path="res://shapes/right_triangle.tscn" id="3_vkyno"]
+[ext_resource type="PackedScene" uid="uid://boeifydqp6ach" path="res://shapes/itrapezoid.tscn" id="4_qu3kw"]
+[ext_resource type="PackedScene" uid="uid://4mvttl76pypr" path="res://shapes/trapezoid.tscn" id="5_070qk"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Parallelogram" parent="." instance=ExtResource("1_a0404")]
+position = Vector2(200, -280)
+length = 4
+v_offset = 8
+
+[node name="Rectangle" parent="." instance=ExtResource("2_4hl7s")]
+position = Vector2(-180, -120)
+width = 16.0
+height = 8.0
+
+[node name="Right_Triangle" parent="." instance=ExtResource("3_vkyno")]
+position = Vector2(140, 40)
+width = 12
+height = 6
+shape_col = Color(0.324159, 0.511805, 0.809946, 1)
+
+[node name="ITrapezoid" parent="." instance=ExtResource("4_qu3kw")]
+position = Vector2(40, 40)
+
+[node name="Trapezoid" parent="." instance=ExtResource("5_070qk")]
+position = Vector2(-100, 40)
